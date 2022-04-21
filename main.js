@@ -1,36 +1,80 @@
 let firstTime = localStorage.getItem("first_time")
 
 
-// if(!firstTime) {
-//     localStorage.setItem("first_time", "1")
-// } else {
-//     document.getElementById('fadetext').style.display = "none"
+if(!firstTime) {
+    localStorage.setItem("first_time", "1")
+    if(window.matchMedia('(min-device-width: 800px)').matches){
+        
+        setTimeout(function(){
+            document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
+        }, 4000)
+    
+        setTimeout(function(){
+            document.getElementById('getready').style.animation = "fadeout1 0.5s ease forwards"
+        }, 6000)
+        
+        setTimeout(function(){
+            document.getElementById('getready').remove()
+            document.getElementById('fadetext').remove()
+            document.getElementById('credInputs').style.display = 'block'
+            document.getElementById('credInputs').style.animation = 'showfields 0.5s ease forwards'
+        }, 6500)
+    } else {
+        setTimeout(function(){
+            document.getElementById('getready').style.animation = "fadeout1 0.5s ease forwards"
+        }, 2500)
+        
+        setTimeout(function(){
+            document.getElementById('getready').remove()
+            document.getElementById('fadetext').remove()
+            document.getElementById('credInputs').style.display = 'block'
+            document.getElementById('credInputs').style.animation = 'showfields 0.5s ease forwards'
+        }, 3000)
+    }
+} else {
+    document.getElementById('fadetext').remove()
+    document.getElementById('getready').remove()
+    document.getElementById('credInputs').style.opacity = "100%"
+    document.getElementById('credInputs').style.display = "block"
+    document.getElementById('wrapper').style.animationDelay = "-3s"
+    document.querySelector('.behindinfo').remove()
+}
 
-// }
-
-// if (!window.matchMedia('(max-device-width: 500px)').matches) {
+// if (window.matchMedia('(min-device-width: 800px)').matches) {
 //     setTimeout(function(){
 //         document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
 //     }, 4000)
-// } else {
-//     document.getElementById('info1').style.display = "block"
-//     document.getElementById('info2').style.display = "block"
 // }
 
-setTimeout(function(){
-            document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
-        }, 4000)
+// if(window.matchMedia('(min-device-width: 800px)').matches){
+//     setTimeout(function(){
+//         document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
+//     }, 4000)
 
-setTimeout(function(){
-    document.getElementById('getready').style.animation = "fadeout1 0.5s ease forwards"
-}, 6000)
+//     setTimeout(function(){
+//         document.getElementById('getready').style.animation = "fadeout1 0.5s ease forwards"
+//     }, 6000)
+    
+//     setTimeout(function(){
+//         document.getElementById('getready').remove()
+//         document.getElementById('fadetext').remove()
+//         document.getElementById('credInputs').style.display = 'block'
+//         document.getElementById('credInputs').style.animation = 'showfields 0.5s ease forwards'
+//     }, 6500)
+// } else {
+//     setTimeout(function(){
+//         document.getElementById('getready').style.animation = "fadeout1 0.5s ease forwards"
+//     }, 2500)
+    
+//     setTimeout(function(){
+//         document.getElementById('getready').remove()
+//         document.getElementById('fadetext').remove()
+//         document.getElementById('credInputs').style.display = 'block'
+//         document.getElementById('credInputs').style.animation = 'showfields 0.5s ease forwards'
+//     }, 3000)
+// }
 
-setTimeout(function(){
-    document.getElementById('getready').remove()
-    document.getElementById('fadetext').remove()
-    document.getElementById('credInputs').style.display = 'block'
-    document.getElementById('credInputs').style.animation = 'showfields 0.5s ease forwards'
-}, 6500)
+
 
 let x = 0
 function showpassword(){
@@ -69,7 +113,7 @@ function pushAccounts(){
     i = keys.length
 
     while (i--){
-        if(JSON.parse(localStorage.getItem(keys[i])) !== "first_time"){
+        if(i !== 0){
             userlist.push(JSON.parse(localStorage.getItem(keys[i])))
         }
     }
