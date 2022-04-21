@@ -8,9 +8,18 @@ let firstTime = localStorage.getItem("first_time")
 
 // }
 
+// if (!window.matchMedia('(max-device-width: 500px)').matches) {
+//     setTimeout(function(){
+//         document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
+//     }, 4000)
+// } else {
+//     document.getElementById('info1').style.display = "block"
+//     document.getElementById('info2').style.display = "block"
+// }
+
 setTimeout(function(){
-    document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
-}, 4000)
+            document.getElementById('wrapper').style.animation = "shift_left 1.4s ease forwards";
+        }, 4000)
 
 setTimeout(function(){
     document.getElementById('getready').style.animation = "fadeout1 0.5s ease forwards"
