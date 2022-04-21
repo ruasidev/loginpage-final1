@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/3e85f38a95.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="behindinfo">
+        <h2 id="info1">< Sign Up There</h2>
+        <h2 id="info2">Check out <a href="https://github.com/ruasidev" target="_blank">my GitHub</a></h2>
+    </div>
+    <div class="wrapper" id="wrapper">
+        <p id="fadetext">Hi.</p>
+        <p id="getready">Welcome to my page.</p>
+        <div class="credInputs" id="credInputs">
+            <i class="fa-solid fa-user icon"></i>
+            <input id="nameInput" type="text" placeholder="Name"></br>
+            <i class="fa-solid fa-user-plus icon"></i>
+            <input id="usernameInput" type="text" placeholder="Username"></br>
+            <i class="fa-solid fa-user-lock icon"></i>
+            <i id="showpass" class="fa-solid fa-eye-slash icon1" onclick="showpassword()"></i>
+            <input id="passwordInput" type="password" placeholder="Password"></br>
+            <i class="fa-solid fa-user-xmark icon"></i>
+            <input id="confirmPassword" type="password" placeholder="Confirm Password"></br>
+            <button onclick="signup()">Sign Up</button>
+            <h4 id="feedback"></h2>
+        </div>
+        
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

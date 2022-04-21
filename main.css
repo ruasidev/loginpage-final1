@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+@keyframes amazinganimation {
+    from {margin-top: 120px;}
+    to {margin-top: 50px;}
+}
+
+@keyframes getready {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+a:hover {
+    animation: changecolours 0.3s linear infinite;
+}
+
+@keyframes changecolours {
+    0% {text-decoration: underline solid lightpink;}
+    50% {text-decoration: underline solid coral;}
+    100% {text-decoration: underline solid lightpink;}
+}
+
+#fadetext {
+    z-index: -1;
+    animation: fadeout 2s ease forwards;
+}
+
+@keyframes fadeout {
+    0% {opacity: 100%;}
+    80% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+@keyframes expand {
+    from {height: 6%;}
+    to {height: 60%;}
+}
+
+@keyframes shift_left {
+    from {transform: translate(-50%, -50%); height: 60%;}
+    to {transform: translate(-300px, -50%); height: 60%;}
+}
+
+@keyframes chocomint {
+    from {opacity: 0%; transform: translate(-50%, -50%);}
+    to {opacity: 100%; transform: translate(200px, -50%);}
+}
+
+@keyframes fadeout1 {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+@keyframes showfields {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes jigglejiggle {
+    0% {transform: translate(0, 0);}
+    20% {transform: translate(-1%, 0%);}
+    40% {transform: translate(2%, 0);}
+    60% {transform: translate(-1%, 0);}
+    80% {transform: translate(0, 0);}
+    100% {transform: translate(0, 0);}
+}
+
+@media only screen and (min-width: 1600px){
+    button {
+        background-color: #7396f7;
+        border: solid 1px #ccc;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .wrapper {
+        left: 50%;
+        right: 50%;
+        top: 50%;
+        height: 6%;
+        vertical-align: middle;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        width: 20%;
+        font-family: 'Oxygen', sans-serif;
+        text-align: center;
+        background-color: white;
+        animation: expand 1s ease forwards;
+        animation-delay: 2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    input {
+        font-family: 'Oxygen', sans-serif;
+        position: relative;
+        padding-left: 70px;
+        padding-top: 17px;
+        padding-right: 10px;
+        padding-bottom: 17px;
+        background-color: #ddd;
+        border-radius: 2px;
+        border: 1px white;
+        margin: 7px;
+    }
+    
+    
+    #getready {
+        position: fixed;
+        opacity: 0%;
+        animation: getready 1s ease forwards 3s;
+    }
+    
+    .links {
+        z-index: -1;
+        position: relative;
+        margin-top: 100px;
+        color: #222;
+    }
+
+    .behindinfo {
+        color: white;
+        font-family: 'Oxygen', sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0%;
+        animation: chocomint 1.4s ease forwards 4s;
+    }
+    
+    #info1 {
+        margin-bottom: 100px;
+    }
+    
+    #info2 {
+        margin-top: 100px;
+    }
+    a {
+        color: lightpink;
+    }
+    
+    .wrapper i {
+        position: absolute;
+    }
+    
+    .icon {
+        padding: 10px;
+        min-width: 40px;
+        z-index: 3;
+        color: #aaa;
+        opacity: 80%;
+        margin-left: 14px;
+        margin-top: 14px;
+    }
+    
+    .credInputs {
+        margin-top: -80px;
+        display: none;
+    }
+    
+    #showpassword {
+        border-radius: 5px;
+        width: 20px;
+        height: 20px;
+        color: #aaa;
+    
+    }
+    
+    .icon1 {
+        padding: 10px;
+        min-width: 40px;
+        z-index: 3;
+        color: #aaa;
+        opacity: 80%;
+        margin-left: 175px;
+        margin-top: 15px;
+    }
+}

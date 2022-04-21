@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 120px;
+    border: 0px solid black;
+    border-radius: 25px;
+    width: 94%;
+    height: 800px;
+    background-color: lightblue;
+    font-family: 'Oxygen', sans-serif;
+}
